@@ -1,11 +1,16 @@
 class Library
-  attr_reader :books
+  # attr_reader :books
 
   def initialize
-    @books = []
+    @books = {}
   end
 
   def add(book)
-    @books << book
+    @books[book.category] ||= []
+    @books[book.category] << book
+  end
+
+  def books
+    @books.values.flatten
   end
 end
