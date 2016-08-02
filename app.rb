@@ -22,6 +22,10 @@ library.add(b6)
 library.add(b7)
 library.add(b8)
 
-for b in library.books do
-  p b
+#for b in library.books do
+  #p b
+#end
+
+library.books_by_category :desenvolvimento do |book|
+  puts "#{book.author} - #{book.isbn}"
 end
