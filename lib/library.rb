@@ -13,8 +13,6 @@ class Library
   end
 
   def books_by_category(category)
-    @books[category].each do |book|
-      yield book if block_given?
-    end
+    @books[category].map
   end
 end

@@ -16,4 +16,7 @@ end
 report = Report.new(library)
 
 puts report.total
+puts report.total(:desenvolvimento)
+
 puts report.titles
+puts report.titles(:desenvolvimento)
