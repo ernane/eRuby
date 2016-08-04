@@ -1,12 +1,13 @@
 class Book
-  attr_accessor :valor
-  attr_reader :author, :isbn, :pages, :category
+  attr_accessor :price
+  attr_reader :author, :title, :isbn, :pages, :category
 
-  def initialize(author, isbn, pages, valor, category)
+  def initialize(author, title, isbn, pages, price, category)
     @author = author
+    @title  = title
     @isbn = isbn
     @pages = pages
-    @valor = valor
+    @price = price
     @category = category
   end
 
@@ -15,7 +16,7 @@ class Book
   end
 
   def to_s
-    "Author: #{@author}, ISBN: #{@isbn}, Valor: #{@valor}, Category: #{@category}"
+    "Author: #{@author}, ISBN: #{@isbn}, Preço: #{@price}, Category: #{@category}"
   end
 
   def eql?(book)
