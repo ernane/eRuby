@@ -24,7 +24,6 @@ library = Library.new
 
 books.each do |book|
   library.add(Book.new(book[:author], book[:title], book[:isbn], book[:pages], book[:price], book[:category]))
-  DataFiles.new.save(Book.new(book[:author], book[:title], book[:isbn], book[:pages], book[:price], book[:category]))
 end
 
 report = Report.new(library)
